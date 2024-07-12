@@ -1,54 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
     <style>
-      .input {
-        margin: 250px 0 0 400px;
-      }
-
-      .input input {
-        border-radius: 10px;
-        border-radius: 5px;
-        border: 1px solid lightblack;
-      }
-
-      .btn {
-        color: green;
-        border-radius: 5px;
-      }
+        .input {
+            margin: 250px 0 0 400px;
+        }
+        .input input {
+            border-radius: 5px;
+            border: 1px solid lightblack;
+        }
+        .btn {
+            color: green;
+            border-radius: 5px;
+        }
     </style>
-  </head>
-
-  <body>
+</head>
+<body>
     <form action="Controller.php" method="post">
-      <button type="submit" name="view">check records<a href="OutPutForm.php"> </a></button>
-      
+        <button type="submit" name="view">Check records</button>
+        <a href="output_form.php"> </a>
     </form>
-
     <form action="Controller.php" method="post">
-      <div class="input">
-        <input type="text " name="name" placeholder="enter ur name" required />
+        <div class="input">
+            <input type="text" name="name" placeholder="Enter your name" required />
+            <br /><br />
 
-        <br /><br />
+            <input type="email" name="email" placeholder="Enter your email" required />
+            <br /><br />
 
-        <input type="email" name="email" placeholder="enter your email" reqiured />
-
-        <br /><br />
-
-        
-        <textarea name="comment" id="" > </textarea> any comments?
-
-        <br /><br />
- <input type="submit" name="submit" class="btn">
-
- 
-      </div>
-
-
+            <textarea name="comment" id="">Any comments?</textarea>
+            <br /><br />
+            
+            <input type="submit" name="submit" class="btn" />
+        </div>
     </form>
-  </body>
+</body>
 </html>

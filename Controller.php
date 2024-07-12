@@ -4,23 +4,19 @@ session_start();
 class users
 {
 
-
-
     private $conn;
 
     public function __construct()
     {
 
-
         $this->conn = new mysqli("localhost", "root", "", "newdb");
-
 
 
         if ($this->conn->connect_error) {
 
             die("connection error  " . $this->conn->connect_error);
         } else {
-           // echo "connection succcesful";
+            // echo "connection succcesful";
         }
     }
 
@@ -37,11 +33,8 @@ class users
     }
 
 
-
-
     public function view()
     {
-
 
         $query2 = "select * from users where 1";
 
@@ -52,11 +45,8 @@ class users
             $data = [];
 
             while ($row = $result->fetch_assoc()) {
-
-
                 $data[] = $row;
             }
-
             $_SESSION['data'] = $data;
             header('location:OutPut.php');
         }
@@ -66,25 +56,13 @@ class users
 
 
 
-
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (isset($_POST['submit'])) {
-
         $user = new users;
-
         $user->add($_REQUEST);
     } elseif (isset($_POST['view'])) {
-
-
         $user = new users;
         $user->view();
     }
-
-
-
-
-
-
 }
